@@ -6,3 +6,8 @@ import seaborn as sns
 # Uploading our dataset
 df = pd.read_csv(r"C:\Users\Administrator\Documents\GitHub\IMDB-Movie-Analysis\Final_IMDB_Movies.csv")
 df.head(5)
+
+df.dtypes
+
+#Summary statistics
+df.describe().T
