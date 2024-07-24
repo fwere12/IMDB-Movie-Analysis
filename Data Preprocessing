@@ -14,3 +14,7 @@ df.describe().T
 
 #Checking for missing values
 df.isnull().sum()
+
+#Count rows
+row_count = df.shape
+row_count
