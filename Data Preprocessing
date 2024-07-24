@@ -11,3 +11,6 @@ df.dtypes
 
 #Summary statistics
 df.describe().T
+
+#Checking for missing values
+df.isnull().sum()
