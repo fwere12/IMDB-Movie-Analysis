@@ -28,3 +28,14 @@ df.drop(["movie_imdb_link"], axis=1, inplace=True)
 print(df.head(5))
 
 print(df.columns)
+
+print(df.dtypes)
+
+#Correlation Matrix
+selected_columns =['imdb_score', 'facenumber_in_poster', 'num_voted_users', 'num_user_for_reviews' ,'num_critic_for_reviews']
+selected_data = df[selected_columns]
+correlation_matrix = selected_data.corr()
+plt.figure(figsize=(10,8))
+sns.heatmap(correlation_matrix,annot =True,cmap = 'crest',fmt='.2f',linewidth=0.5)
+plt.title('Correlation Matrix')
+plt.show()
