@@ -39,3 +39,6 @@ plt.figure(figsize=(10,8))
 sns.heatmap(correlation_matrix,annot =True,cmap = 'crest',fmt='.2f',linewidth=0.5)
 plt.title('Correlation Matrix')
 plt.show()
+
+#saving our plot
+plt.savefig("plot.png") 
