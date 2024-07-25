@@ -22,3 +22,9 @@ print(row_count)
 #We will drop the null value
 df.dropna(subset = ["language"], inplace=True)
 print(df.isnull().sum())
+
+#Dropping the movie_imdb_link column because we dont need it
+df.drop(["movie_imdb_link"], axis=1, inplace=True)
+print(df.head(5))
+
+print(df.columns)
