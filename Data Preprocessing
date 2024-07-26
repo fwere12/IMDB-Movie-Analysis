@@ -59,3 +59,12 @@ plt.title('Relationship between viewer votes and IMDB Ratings')
 plt.xlabel('User votes')
 plt.ylabel('IMDB Rating')
 plt.show()
+
+columns_of_interest = ['director_name','cast_total_facebook_likes','imdb_score']
+data = df[columns_of_interest]
+director_ratings = data.groupby('director_name')['imdb_score'].mean()
+actor_ratings = data.groupby('cast_total_facebook_likes')['imdb_score'].mean()
+print('Average IMDB Score by Director')
+print(director_ratings.sort_values(ascending=False))
+print('\nAverage IMDB Ratings of Actor:')
+print(actor_ratings.sort_values(ascending = False))
