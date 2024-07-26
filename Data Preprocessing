@@ -42,3 +42,13 @@ plt.show()
 
 #saving our plot
 plt.savefig("plot.png") 
+
+genre_counts = df['genres'].value_counts()
+top_genres = genre_counts.head(10)
+plt.figure(figsize=(10,6))
+top_genres.plot(kind='bar',color='skyblue')
+plt.title('Top Genres For movies with highest IMDB Ratings')
+plt.xlabel('Genre')
+plt.ylabel('Number of movies')
+plt.xticks(rotation = 45,ha ='right')
+plt.show()
