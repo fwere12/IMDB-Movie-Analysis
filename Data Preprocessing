@@ -68,3 +68,11 @@ print('Average IMDB Score by Director')
 print(director_ratings.sort_values(ascending=False))
 print('\nAverage IMDB Ratings of Actor:')
 print(actor_ratings.sort_values(ascending = False))
+
+#Movie score by language
+plt.figure(figsize=(14, 8))
+sns.barplot(x='imdb_score', y='language', data=df, palette='viridis')
+plt.xlabel('IMDB Score')
+plt.ylabel('Language')
+plt.title('Average Movie Rating by Language')
+plt.show()
